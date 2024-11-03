@@ -22,9 +22,11 @@ class MethodChannelTencentKit extends TencentKitPlatform {
       case 'onLoginResp':
         _respStreamController.add(TencentLoginResp.fromJson(
             (call.arguments as Map<dynamic, dynamic>).cast<String, dynamic>()));
+        break;
       case 'onShareResp':
         _respStreamController.add(TencentShareMsgResp.fromJson(
             (call.arguments as Map<dynamic, dynamic>).cast<String, dynamic>()));
+        break;
     }
   }
 
